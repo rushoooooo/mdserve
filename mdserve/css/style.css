@@ -3,9 +3,9 @@
     grid-auto-flow: column;
     grid-template-columns: auto 0 1fr;
     grid-gap: 24px;
-    padding-right: 32px;
-    padding-left: 32px;
-    max-width: 80em;
+    /*padding-right: 32px;*/
+    /*padding-left: 32px;*/
+    max-width: 99%;
     margin-right: auto;
     margin-left: auto;
     margin-top: 24px;
@@ -21,9 +21,18 @@
     background: #f4f4f4;
 }
 
+.fixed-header {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 10px;
+  z-index: 1000;
+}
+
 .layout-main {
     grid-column: 2/span 2;
-    max-width: 60em;
+    max-width: 100%;
 }
 
 .layout-sidebar ul {

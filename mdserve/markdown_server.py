@@ -120,9 +120,9 @@ class MarkdownHTTPRequestHandler(BaseHTTPRequestHandler):
         full_page.extend(self.header_content())
         full_page.extend(["</head>", '<body>'])
         full_page.extend(
-            ['<div class="layout">', '<div class="layout-sidebar">'])
+            ['<div class="layout">', '<div class="layout-sidebar"><header class="fixed-header">'])
         full_page.extend(self.make_sidebar(full_path))
-        full_page.extend(['</div>', '<div class="layout-main markdown">'])
+        full_page.extend(['</header></div>', '<div class="layout-main markdown">'])
         full_page.extend(content)
         full_page.extend(["</div>", '</div>'])
         full_page.append("</body></html>")
